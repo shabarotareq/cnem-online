@@ -3,202 +3,1304 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>شركة سنيم - التدريب الإلكتروني والذكاء الاصطناعي</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>شركة سنيم للتدريب الإلكتروني والذكاء الاصطناعي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <style>
+      * {
+        font-family: "Tajawal", sans-serif;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(
+          -45deg,
+          #87ceeb,
+          #4fc3f7,
+          #29b6f6,
+          #03a9f4,
+          #0288d1,
+          #0277bd
+        );
+        background-size: 400% 400%;
+        animation: gradientShift 15s ease infinite;
+      }
+
+      @keyframes gradientShift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .gradient-text {
+        background: linear-gradient(135deg, #0288d1 0%, #29b6f6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .floating {
+        animation: floating 3s ease-in-out infinite;
+      }
+
+      @keyframes floating {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      .slide-in {
+        animation: slideIn 0.8s ease-out;
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .glow-effect {
+        box-shadow: 0 0 20px rgba(41, 182, 246, 0.3);
+        transition: all 0.3s ease;
+      }
+
+      .glow-effect:hover {
+        box-shadow: 0 0 30px rgba(41, 182, 246, 0.6);
+        transform: translateY(-5px);
+      }
+
+      .card-hover {
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      .card-hover:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .marquee {
+        animation: marquee 25s linear infinite;
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      .pulse-animation {
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.7;
+        }
+      }
+
+      .navbar-glass {
+        background: linear-gradient(
+          135deg,
+          rgba(88, 28, 135, 0.95) 0%,
+          rgba(147, 51, 234, 0.95) 50%,
+          rgba(168, 85, 247, 0.95) 100%
+        );
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(196, 181, 253, 0.3);
+        box-shadow: 0 4px 20px rgba(88, 28, 135, 0.2);
+      }
+
+      .hero-pattern {
+        background-image: radial-gradient(
+            circle at 25% 25%,
+            rgba(255, 255, 255, 0.1) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 75% 75%,
+            rgba(41, 182, 246, 0.1) 0%,
+            transparent 50%
+          );
+      }
+
+      .service-icon {
+        background: linear-gradient(135deg, #0288d1 0%, #29b6f6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .btn-gradient {
+        background: linear-gradient(135deg, #0288d1 0%, #29b6f6 100%);
+        transition: all 0.3s ease;
+      }
+
+      .btn-gradient:hover {
+        background: linear-gradient(135deg, #29b6f6 0%, #0288d1 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(41, 182, 246, 0.3);
+      }
+    </style>
   </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="#">شركة سنيم</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="#solutions">الحلول الرقمية</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#training">التدريب</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#news">الأخبار</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#services">الخدمات</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">تواصل معنا</a>
-            </li>
-          </ul>
-          <button
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#authModal"
-          >
-            دخول / تسجيل
-          </button>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 navbar-glass">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center space-x-4 space-x-reverse">
+            <div class="flex items-center space-x-2 space-x-reverse">
+              <i class="fas fa-brain text-2xl gradient-text"></i>
+              <span class="text-xl font-bold text-white">سنيم</span>
+            </div>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-8 space-x-reverse">
+            <a
+              href="#"
+              class="text-white hover:text-purple-300 transition-colors duration-300 font-medium"
+              >الرئيسية</a
+            >
+            <div class="relative group">
+              <a
+                href="#"
+                class="text-white hover:text-purple-300 transition-colors duration-300 font-medium flex items-center space-x-1 space-x-reverse"
+              >
+                <span>الحلول الرقمية</span>
+                <i class="fas fa-chevron-down text-sm"></i>
+              </a>
+              <div
+                class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300"
+              >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-800 hover:bg-purple-50 rounded-t-lg"
+                  >التجارية</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-800 hover:bg-purple-50"
+                  >الصناعية</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-800 hover:bg-purple-50"
+                  >الخدماتية</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-gray-800 hover:bg-purple-50 rounded-b-lg"
+                  >الزراعية</a
+                >
+              </div>
+            </div>
+            <a
+              href="#training"
+              class="text-white hover:text-purple-300 transition-colors duration-300 font-medium"
+              >التدريب</a
+            >
+            <a
+              href="#gallery"
+              class="text-white hover:text-purple-300 transition-colors duration-300 font-medium"
+              >معرض الصور</a
+            >
+            <a
+              href="#contact"
+              class="text-white hover:text-purple-300 transition-colors duration-300 font-medium"
+              >تواصل معنا</a
+            >
+          </div>
+
+          <div class="flex items-center space-x-3 space-x-reverse">
+            <button
+              class="btn-gradient text-white px-6 py-2 rounded-full font-medium"
+            >
+              احجز استشارة مجانية
+            </button>
+            <button
+              onclick="openAuthModal()"
+              class="border-2 border-white text-white px-6 py-2 rounded-full font-medium hover:bg-white hover:text-purple-600 transition-all duration-300"
+            >
+              تسجيل / دخول
+            </button>
+          </div>
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
-    <header
-      class="hero d-flex align-items-center justify-content-center text-center"
+    <section
+      class="gradient-bg hero-pattern min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      <div class="overlay"></div>
-      <div class="hero-content text-white">
-        <h1 class="fw-bold">مرحبا بكم في شركة سنيم</h1>
-        <p>حلول رقمية وتدريب إلكتروني باستخدام الذكاء الاصطناعي</p>
-        <a href="#solutions" class="btn btn-light mt-3">ابدأ الآن</a>
-      </div>
-    </header>
-
-    <!-- Solutions Section -->
-    <section id="solutions" class="container my-5">
-      <h2 class="section-title">الحلول الرقمية</h2>
-      <p class="lead">
-        حلول للقطاعات التجارية، الصناعية، الزراعية والخدماتية... مع إمكانية حجز
-        متجر إلكتروني عبر منصة سوق فلسطين والتسويق في الخليج والعالم.
-      </p>
-    </section>
-
-    <!-- Training Section -->
-    <section id="training" class="bg-light py-5">
-      <div class="container">
-        <h2 class="section-title">التدريب للشباب والأفراد</h2>
-        <p class="lead">
-          تدريب تفاعلي باستخدام أدوات الذكاء الاصطناعي، مع فرص التشغيل الحر
-          ومتابعة المشاريع الريادية من مختصين.
-        </p>
-      </div>
-    </section>
-
-    <!-- News Section -->
-    <section id="news" class="container my-5">
-      <h2 class="section-title">آخر الأخبار</h2>
-      <div class="news-ticker">
-        <marquee behavior="scroll" direction="right" scrollamount="5">
-          <a href="#">📢 إطلاق برنامج تدريب جديد بالتعاون مع شركة الغدير</a> |
-          <a href="#">🚀 فتح باب التسجيل لحجز متجر إلكتروني في سوق فلسطين</a> |
-          <a href="#"
-            >🌍 شراكة استراتيجية مع اتحاد الغرف التجارية للتوسع عربياً</a
+      <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+      <div class="relative z-10 text-center text-white px-4 max-w-6xl mx-auto">
+        <div class="slide-in">
+          <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+            مستقبل التعلم
+            <span
+              class="block gradient-text bg-white bg-clip-text text-transparent"
+              >الرقمي</span
+            >
+          </h1>
+          <p
+            class="text-xl md:text-2xl mb-8 bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 bg-clip-text text-transparent max-w-3xl mx-auto leading-relaxed font-semibold"
           >
-        </marquee>
+            نحن نقود التحول الرقمي في التعليم والتدريب باستخدام أحدث تقنيات
+            الذكاء الاصطناعي
+          </p>
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+            <button
+              class="btn-gradient text-white px-8 py-4 rounded-full text-lg font-bold glow-effect"
+            >
+              <i class="fas fa-rocket ml-2"></i>
+              ابدأ رحلتك الآن
+            </button>
+            <button
+              class="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-purple-600 transition-all duration-300"
+            >
+              <i class="fas fa-play ml-2"></i>
+              شاهد العرض التوضيحي
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating Elements -->
+      <div class="absolute top-20 right-20 floating">
+        <div
+          class="w-20 h-20 bg-white bg-opacity-10 rounded-full flex items-center justify-center"
+        >
+          <i class="fas fa-brain text-2xl text-white"></i>
+        </div>
+      </div>
+      <div
+        class="absolute bottom-32 left-20 floating"
+        style="animation-delay: 1s"
+      >
+        <div
+          class="w-16 h-16 bg-white bg-opacity-10 rounded-full flex items-center justify-center"
+        >
+          <i class="fas fa-graduation-cap text-xl text-white"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- News Ticker -->
+    <div
+      class="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 py-3 overflow-hidden"
+    >
+      <div class="marquee whitespace-nowrap">
+        <span class="text-white font-bold text-lg mx-8"
+          >🎉 إطلاق برنامج الذكاء الاصطناعي الجديد</span
+        >
+        <span class="text-white font-bold text-lg mx-8"
+          >📚 خصم 50% على جميع الدورات التدريبية</span
+        >
+        <span class="text-white font-bold text-lg mx-8"
+          >🏆 حصلنا على جائزة أفضل منصة تعليمية</span
+        >
+        <span class="text-white font-bold text-lg mx-8"
+          >💡 ورشة مجانية حول تطبيقات الذكاء الاصطناعي</span
+        >
+      </div>
+    </div>
+
+    <!-- Main Content Section with Sidebar -->
+    <section class="py-20 bg-gradient-to-br from-sky-50 via-blue-50 to-cyan-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+          <!-- Sidebar -->
+          <div class="lg:w-1/4">
+            <div class="bg-white rounded-2xl p-6 shadow-lg sticky top-24">
+              <h5
+                class="text-xl font-bold gradient-text mb-6 flex items-center"
+              >
+                <i class="fas fa-list-ul ml-2"></i>
+                الأقسام
+              </h5>
+              <nav class="space-y-3">
+                <a
+                  href="#solutions"
+                  class="flex items-center p-3 rounded-lg hover:bg-purple-50 transition-all duration-300 text-gray-700 hover:text-purple-600 group"
+                >
+                  <i
+                    class="fas fa-laptop-code ml-3 text-purple-500 group-hover:scale-110 transition-transform duration-300"
+                  ></i>
+                  الحلول الرقمية
+                </a>
+                <a
+                  href="#training"
+                  class="flex items-center p-3 rounded-lg hover:bg-green-50 transition-all duration-300 text-gray-700 hover:text-green-600 group"
+                >
+                  <i
+                    class="fas fa-graduation-cap ml-3 text-green-500 group-hover:scale-110 transition-transform duration-300"
+                  ></i>
+                  التدريب للشباب
+                </a>
+                <a
+                  href="#gallery"
+                  class="flex items-center p-3 rounded-lg hover:bg-blue-50 transition-all duration-300 text-gray-700 hover:text-blue-600 group"
+                >
+                  <i
+                    class="fas fa-photo-film ml-3 text-blue-500 group-hover:scale-110 transition-transform duration-300"
+                  ></i>
+                  معرض الصور والفيديو
+                </a>
+                <a
+                  href="#services"
+                  class="flex items-center p-3 rounded-lg hover:bg-orange-50 transition-all duration-300 text-gray-700 hover:text-orange-600 group"
+                >
+                  <i
+                    class="fas fa-cogs ml-3 text-orange-500 group-hover:scale-110 transition-transform duration-300"
+                  ></i>
+                  الخدمات والدورات
+                </a>
+              </nav>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="lg:w-3/4 space-y-12">
+            <!-- Section 1: حلول رقمية -->
+            <section
+              id="solutions"
+              class="bg-white rounded-2xl p-8 shadow-lg card-hover"
+            >
+              <h2
+                class="text-3xl font-bold text-purple-600 mb-6 flex items-center"
+              >
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-xl flex items-center justify-center ml-4"
+                >
+                  <i class="fas fa-laptop-code text-white text-xl"></i>
+                </div>
+                الحلول الرقمية
+              </h2>
+              <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                تقدم شركة سنيم حلولاً مبتكرة للقطاعات التجارية، الصناعية،
+                الخدماتية، والزراعية لتمكينهم من تطوير أعمالهم وتسويق منتجاتهم
+                عبر التكنولوجيا والذكاء الاصطناعي.
+              </p>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div
+                  class="bg-gradient-to-br from-sky-50 to-sky-100 p-6 rounded-xl"
+                >
+                  <div
+                    class="w-12 h-12 bg-sky-500 rounded-lg flex items-center justify-center mb-4"
+                  >
+                    <i class="fas fa-store text-white"></i>
+                  </div>
+                  <h4 class="font-bold text-sky-800 mb-2">متجر إلكتروني</h4>
+                  <p class="text-sky-700 text-sm">
+                    حجز متجر إلكتروني في سوق فلسطين الإلكتروني
+                  </p>
+                </div>
+                <div
+                  class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl"
+                >
+                  <div
+                    class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4"
+                  >
+                    <i class="fas fa-warehouse text-white"></i>
+                  </div>
+                  <h4 class="font-bold text-blue-800 mb-2">مكان التخزين</h4>
+                  <p class="text-blue-700 text-sm">
+                    حجز مكان تخزين وعرض البضائع في إمارة الشارقة
+                  </p>
+                </div>
+                <div
+                  class="bg-gradient-to-br from-cyan-50 to-cyan-100 p-6 rounded-xl"
+                >
+                  <div
+                    class="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mb-4"
+                  >
+                    <i class="fas fa-globe text-white"></i>
+                  </div>
+                  <h4 class="font-bold text-cyan-800 mb-2">التسويق العالمي</h4>
+                  <p class="text-cyan-700 text-sm">
+                    التسويق لكافة دول الخليج والعالم
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Section 2: تدريب -->
+            <section
+              id="training"
+              class="bg-white rounded-2xl p-8 shadow-lg card-hover"
+            >
+              <h2
+                class="text-3xl font-bold text-green-600 mb-6 flex items-center"
+              >
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-xl flex items-center justify-center ml-4"
+                >
+                  <i class="fas fa-graduation-cap text-white text-xl"></i>
+                </div>
+                التدريب للشباب
+              </h2>
+              <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                برامج تدريبية تفاعلية عبر أدوات الاتصال الإلكتروني والذكاء
+                الاصطناعي، تتيح فرص التشغيل الحر، البدء بالمشاريع الريادية،
+                ومتابعتها مع مختصين من شركة سنيم.
+              </p>
+              <div
+                class="bg-gradient-to-r from-sky-50 to-blue-50 p-6 rounded-xl border-r-4 border-sky-500"
+              >
+                <div class="flex items-center mb-3">
+                  <div
+                    class="w-10 h-10 bg-sky-500 rounded-full flex items-center justify-center ml-3"
+                  >
+                    <i class="fas fa-robot text-white"></i>
+                  </div>
+                  <h4 class="font-bold text-sky-800">الشات بوت الذكي</h4>
+                </div>
+                <p class="text-sky-700">
+                  مع إمكانية الرد الآلي عبر الشات بوت المتطور
+                </p>
+              </div>
+            </section>
+
+            <!-- Gallery -->
+            <section
+              id="gallery"
+              class="bg-white rounded-2xl p-8 shadow-lg card-hover"
+            >
+              <h2
+                class="text-3xl font-bold text-blue-600 mb-6 flex items-center"
+              >
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl flex items-center justify-center ml-4"
+                >
+                  <i class="fas fa-photo-film text-white text-xl"></i>
+                </div>
+                معرض الصور والفيديو
+              </h2>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="relative group overflow-hidden rounded-xl">
+                  <div
+                    class="w-full h-64 bg-gradient-to-br from-purple-200 to-purple-400 rounded-xl flex items-center justify-center"
+                  >
+                    <div class="text-center text-purple-800">
+                      <i class="fas fa-image text-4xl mb-2"></i>
+                      <p class="font-medium">صورة توضيحية 1</p>
+                    </div>
+                  </div>
+                  <div
+                    class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 rounded-xl"
+                  ></div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl">
+                  <div
+                    class="w-full h-64 bg-gradient-to-br from-blue-200 to-blue-400 rounded-xl flex items-center justify-center"
+                  >
+                    <div class="text-center text-blue-800">
+                      <i class="fas fa-image text-4xl mb-2"></i>
+                      <p class="font-medium">صورة توضيحية 2</p>
+                    </div>
+                  </div>
+                  <div
+                    class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 rounded-xl"
+                  ></div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl">
+                  <div
+                    class="w-full h-64 bg-gradient-to-br from-red-200 to-red-400 rounded-xl flex items-center justify-center"
+                  >
+                    <div class="text-center text-red-800">
+                      <i class="fas fa-play-circle text-4xl mb-2"></i>
+                      <p class="font-medium">فيديو توضيحي</p>
+                    </div>
+                  </div>
+                  <div
+                    class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 rounded-xl"
+                  ></div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Services Section -->
+            <section
+              id="services"
+              class="bg-white rounded-2xl p-8 shadow-lg card-hover"
+            >
+              <h2
+                class="text-3xl font-bold text-orange-600 mb-6 flex items-center"
+              >
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-xl flex items-center justify-center ml-4"
+                >
+                  <i class="fas fa-cubes text-white text-xl"></i>
+                </div>
+                الخدمات والدورات
+              </h2>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div
+                  class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl card-hover border border-blue-200"
+                >
+                  <div
+                    class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4"
+                  >
+                    <i class="fas fa-robot text-white"></i>
+                  </div>
+                  <h5 class="font-bold text-blue-800 mb-3 text-lg">
+                    دورات الذكاء الاصطناعي
+                  </h5>
+                  <p class="text-blue-700 text-sm leading-relaxed">
+                    بالتعاون مع شركة الغدير - مسرعات الأعمال
+                  </p>
+                </div>
+                <div
+                  class="bg-gradient-to-br from-sky-50 to-sky-100 p-6 rounded-xl card-hover border border-sky-200"
+                >
+                  <div
+                    class="w-12 h-12 bg-sky-500 rounded-lg flex items-center justify-center mb-4"
+                  >
+                    <i class="fas fa-lightbulb text-white"></i>
+                  </div>
+                  <h5 class="font-bold text-sky-800 mb-3 text-lg">
+                    ريادة الأعمال
+                  </h5>
+                  <p class="text-sky-700 text-sm leading-relaxed">
+                    برامج لدعم الأفكار الريادية ومتابعتها
+                  </p>
+                </div>
+                <div
+                  class="bg-gradient-to-br from-cyan-50 to-cyan-100 p-6 rounded-xl card-hover border border-cyan-200"
+                >
+                  <div
+                    class="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mb-4"
+                  >
+                    <i class="fas fa-chart-line text-white"></i>
+                  </div>
+                  <h5 class="font-bold text-cyan-800 mb-3 text-lg">
+                    التسويق الرقمي
+                  </h5>
+                  <p class="text-cyan-700 text-sm leading-relaxed">
+                    دورات لتسويق المنتجات عبر الإنترنت
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="container my-5">
-      <h2 class="section-title">الخدمات والدورات</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card service-card shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">تطوير الأعمال</h5>
-              <p class="card-text">
-                استخدام الذكاء الاصطناعي لتطوير الأعمال التجارية والخدماتية.
+    <section class="py-20 bg-white" id="services">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-black gradient-text mb-4">
+            خدماتنا المتميزة
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            نقدم حلولاً شاملة ومبتكرة تلبي احتياجات العصر الرقمي
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service Card 1 -->
+          <div
+            class="card-hover bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8 shadow-lg border border-sky-100"
+          >
+            <div class="text-center mb-6">
+              <div
+                class="w-20 h-20 mx-auto bg-gradient-to-br from-sky-400 to-blue-600 rounded-2xl flex items-center justify-center mb-4"
+              >
+                <i class="fas fa-robot text-3xl text-white"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-sky-800 mb-2">
+                الذكاء الاصطناعي
+              </h3>
+              <p class="text-sky-600">
+                حلول ذكية متطورة لتحسين الأعمال والعمليات
               </p>
             </div>
+            <ul class="space-y-2 text-sky-600">
+              <li class="flex items-center">
+                <i class="fas fa-check text-cyan-500 ml-2"></i>تطوير نماذج
+                الذكاء الاصطناعي
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-cyan-500 ml-2"></i>معالجة اللغات
+                الطبيعية
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-cyan-500 ml-2"></i>رؤية الحاسوب
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service Card 2 -->
+          <div
+            class="card-hover bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 shadow-lg border border-blue-100"
+          >
+            <div class="text-center mb-6">
+              <div
+                class="w-20 h-20 mx-auto bg-gradient-to-br from-blue-400 to-cyan-600 rounded-2xl flex items-center justify-center mb-4"
+              >
+                <i class="fas fa-graduation-cap text-3xl text-white"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-blue-800 mb-2">
+                التدريب الإلكتروني
+              </h3>
+              <p class="text-blue-600">برامج تدريبية تفاعلية ومتطورة</p>
+            </div>
+            <ul class="space-y-2 text-blue-600">
+              <li class="flex items-center">
+                <i class="fas fa-check text-sky-500 ml-2"></i>منصات تعلم تفاعلية
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-sky-500 ml-2"></i>محتوى تعليمي متخصص
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-sky-500 ml-2"></i>شهادات معتمدة
+              </li>
+            </ul>
+          </div>
+
+          <!-- Service Card 3 -->
+          <div
+            class="card-hover bg-gradient-to-br from-cyan-50 to-sky-50 rounded-2xl p-8 shadow-lg border border-cyan-100"
+          >
+            <div class="text-center mb-6">
+              <div
+                class="w-20 h-20 mx-auto bg-gradient-to-br from-cyan-400 to-sky-600 rounded-2xl flex items-center justify-center mb-4"
+              >
+                <i class="fas fa-cogs text-3xl text-white"></i>
+              </div>
+              <h3 class="text-2xl font-bold text-cyan-800 mb-2">
+                الحلول الرقمية
+              </h3>
+              <p class="text-cyan-600">تطوير وتنفيذ الحلول التقنية المتكاملة</p>
+            </div>
+            <ul class="space-y-2 text-cyan-600">
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-500 ml-2"></i>تطوير التطبيقات
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-500 ml-2"></i>أنظمة إدارة
+                المحتوى
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-500 ml-2"></i>التحول الرقمي
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="card service-card shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">التسويق الذكي</h5>
-              <p class="card-text">
-                استراتيجيات تسويقية ذكية للوصول إلى أسواق الخليج والعالم.
-              </p>
-            </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 gradient-bg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white"
+        >
+          <div class="pulse-animation">
+            <div class="text-4xl md:text-5xl font-black mb-2">500+</div>
+            <div class="text-lg text-gray-200">عميل راضٍ</div>
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card service-card shadow-sm">
-            <div class="card-body">
-              <h5 class="card-title">الدورات التدريبية</h5>
-              <p class="card-text">
-                برامج تدريبية تفاعلية بالشراكة مع شركة الغدير - مسرعات الأعمال.
-              </p>
-            </div>
+          <div class="pulse-animation" style="animation-delay: 0.5s">
+            <div class="text-4xl md:text-5xl font-black mb-2">50+</div>
+            <div class="text-lg text-gray-200">دورة تدريبية</div>
+          </div>
+          <div class="pulse-animation" style="animation-delay: 1s">
+            <div class="text-4xl md:text-5xl font-black mb-2">10+</div>
+            <div class="text-lg text-gray-200">سنوات خبرة</div>
+          </div>
+          <div class="pulse-animation" style="animation-delay: 1.5s">
+            <div class="text-4xl md:text-5xl font-black mb-2">100%</div>
+            <div class="text-lg text-gray-200">رضا العملاء</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Partners Section -->
-    <footer id="contact" class="bg-dark text-white py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h5>شركة سنيم</h5>
-            <p>للتدريب الإلكتروني والذكاء الاصطناعي</p>
-            <p><i class="fa-solid fa-envelope"></i> info@snim.ps</p>
-            <p><i class="fa-solid fa-phone"></i> +970-123456789</p>
+    <section class="py-16 bg-gradient-to-br from-sky-100 to-blue-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center gradient-text mb-12">
+          شركاؤنا في النجاح
+        </h2>
+        <div class="flex flex-wrap justify-center items-center gap-8">
+          <div
+            class="w-32 h-20 bg-gradient-to-br from-sky-50 to-blue-50 rounded-lg shadow-md flex items-center justify-center card-hover border border-sky-200"
+          >
+            <span class="text-2xl font-bold text-sky-600">شريك 1</span>
           </div>
-          <div class="col-md-6">
-            <h5>الشركاء</h5>
-            <p>✅ اتحاد الغرف التجارية الصناعية الزراعية</p>
-            <p>✅ شركة الغدير - مسرعات الأعمال</p>
-            <h5 class="mt-3">جهات التسجيل الرسمي</h5>
-            <p>📌 وزارة الاقتصاد</p>
-            <p>📌 اتحاد شركات أنظمة المعلومات (بيتا)</p>
+          <div
+            class="w-32 h-20 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg shadow-md flex items-center justify-center card-hover border border-blue-200"
+          >
+            <span class="text-2xl font-bold text-blue-600">شريك 2</span>
+          </div>
+          <div
+            class="w-32 h-20 bg-gradient-to-br from-cyan-50 to-sky-50 rounded-lg shadow-md flex items-center justify-center card-hover border border-cyan-200"
+          >
+            <span class="text-2xl font-bold text-cyan-600">شريك 3</span>
+          </div>
+          <div
+            class="w-32 h-20 bg-gradient-to-br from-sky-50 to-blue-50 rounded-lg shadow-md flex items-center justify-center card-hover border border-sky-200"
+          >
+            <span class="text-2xl font-bold text-sky-600">شريك 4</span>
           </div>
         </div>
-        <p class="text-center mt-4">© 2025 جميع الحقوق محفوظة - شركة سنيم</p>
       </div>
-    </footer>
+    </section>
 
     <!-- Auth Modal -->
-    <div class="modal fade" id="authModal" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">تسجيل الدخول / الاشتراك</h5>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <input
-                type="email"
-                class="form-control mb-3"
-                placeholder="البريد الإلكتروني"
-              />
-              <input
-                type="password"
-                class="form-control mb-3"
-                placeholder="كلمة المرور"
-              />
-              <button type="submit" class="btn btn-primary w-100">
-                تسجيل الدخول
-              </button>
-            </form>
-            <hr />
-            <a href="#">هل نسيت كلمة السر؟</a><br />
-            <a href="#">مستخدم جديد؟ سجل الآن</a>
-          </div>
+    <div
+      id="authModal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+    >
+      <div
+        class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 transform scale-95 transition-all duration-300"
+        id="modalContent"
+      >
+        <div class="text-center mb-6">
+          <h2 class="text-2xl font-bold gradient-text mb-2">مرحباً بك</h2>
+          <p class="text-gray-600">سجل دخولك أو أنشئ حساباً جديداً</p>
         </div>
+
+        <div class="flex mb-6">
+          <button
+            onclick="showLogin()"
+            id="loginTab"
+            class="flex-1 py-2 text-center font-medium border-b-2 border-purple-500 text-purple-600"
+          >
+            تسجيل الدخول
+          </button>
+          <button
+            onclick="showRegister()"
+            id="registerTab"
+            class="flex-1 py-2 text-center font-medium border-b-2 border-gray-200 text-gray-500"
+          >
+            حساب جديد
+          </button>
+        </div>
+
+        <!-- Login Form -->
+        <form id="loginForm" class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1"
+              >البريد الإلكتروني</label
+            >
+            <input
+              type="email"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+              placeholder="أدخل بريدك الإلكتروني"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1"
+              >كلمة المرور</label
+            >
+            <input
+              type="password"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+              placeholder="أدخل كلمة المرور"
+            />
+          </div>
+          <div class="flex items-center justify-between">
+            <label class="flex items-center">
+              <input
+                type="checkbox"
+                class="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+              />
+              <span class="mr-2 text-sm text-gray-600">تذكرني</span>
+            </label>
+            <a href="#" class="text-sm text-purple-600 hover:text-purple-800"
+              >نسيت كلمة المرور؟</a
+            >
+          </div>
+          <button
+            type="submit"
+            class="w-full btn-gradient text-white py-3 rounded-lg font-medium"
+          >
+            تسجيل الدخول
+          </button>
+        </form>
+
+        <!-- Register Form -->
+        <form id="registerForm" class="space-y-4 hidden">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1"
+              >الاسم الكامل</label
+            >
+            <input
+              type="text"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+              placeholder="أدخل اسمك الكامل"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1"
+              >البريد الإلكتروني</label
+            >
+            <input
+              type="email"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+              placeholder="أدخل بريدك الإلكتروني"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1"
+              >كلمة المرور</label
+            >
+            <input
+              type="password"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+              placeholder="أدخل كلمة المرور"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1"
+              >تأكيد كلمة المرور</label
+            >
+            <input
+              type="password"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+              placeholder="أعد إدخال كلمة المرور"
+            />
+          </div>
+          <label class="flex items-center">
+            <input
+              type="checkbox"
+              class="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
+            />
+            <span class="mr-2 text-sm text-gray-600"
+              >أوافق على الشروط والأحكام</span
+            >
+          </label>
+          <button
+            type="submit"
+            class="w-full btn-gradient text-white py-3 rounded-lg font-medium"
+          >
+            إنشاء حساب
+          </button>
+        </form>
+
+        <button
+          onclick="closeAuthModal()"
+          class="absolute top-4 left-4 text-gray-400 hover:text-gray-600 transition-colors duration-300"
+        >
+          <i class="fas fa-times text-xl"></i>
+        </button>
       </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <!-- Contact Section -->
+    <section class="py-20 bg-white" id="contact">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-black gradient-text mb-4">
+            تواصل معنا
+          </h2>
+          <p class="text-xl text-gray-600">
+            نحن هنا لمساعدتك في تحقيق أهدافك الرقمية
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <div class="space-y-8">
+              <div class="flex items-center space-x-4 space-x-reverse">
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-sky-400 to-blue-600 rounded-full flex items-center justify-center"
+                >
+                  <i class="fas fa-phone text-white"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-sky-800">الهاتف</h3>
+                  <p class="text-sky-600">+966 50 123 4567</p>
+                </div>
+              </div>
+
+              <div class="flex items-center space-x-4 space-x-reverse">
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-600 rounded-full flex items-center justify-center"
+                >
+                  <i class="fas fa-envelope text-white"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-blue-800">
+                    البريد الإلكتروني
+                  </h3>
+                  <p class="text-blue-600">info@saneem.com</p>
+                </div>
+              </div>
+
+              <div class="flex items-center space-x-4 space-x-reverse">
+                <div
+                  class="w-12 h-12 bg-gradient-to-br from-cyan-400 to-sky-600 rounded-full flex items-center justify-center"
+                >
+                  <i class="fas fa-map-marker-alt text-white"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-cyan-800">العنوان</h3>
+                  <p class="text-cyan-600">الرياض، المملكة العربية السعودية</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-sky-50 to-blue-50 rounded-2xl p-8">
+            <form class="space-y-6">
+              <div>
+                <label class="block text-sm font-bold text-gray-700 mb-2"
+                  >الاسم الكامل</label
+                >
+                <input
+                  type="text"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                  placeholder="أدخل اسمك الكامل"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-bold text-gray-700 mb-2"
+                  >البريد الإلكتروني</label
+                >
+                <input
+                  type="email"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                  placeholder="أدخل بريدك الإلكتروني"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-bold text-gray-700 mb-2"
+                  >الرسالة</label
+                >
+                <textarea
+                  rows="4"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300"
+                  placeholder="اكتب رسالتك هنا"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full btn-gradient text-white py-3 rounded-lg font-bold text-lg"
+              >
+                إرسال الرسالة
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16" id="contact">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <!-- Company Info -->
+          <div>
+            <div class="flex items-center space-x-2 space-x-reverse mb-4">
+              <i class="fas fa-brain text-2xl gradient-text"></i>
+              <span class="text-2xl font-bold">شركة سنيم</span>
+            </div>
+            <p class="text-gray-400 mb-6">
+              للتدريب الإلكتروني والذكاء الاصطناعي
+            </p>
+
+            <div class="space-y-3 mb-6">
+              <div class="flex items-center space-x-3 space-x-reverse">
+                <div
+                  class="w-8 h-8 bg-gradient-to-br from-sky-400 to-blue-600 rounded-full flex items-center justify-center"
+                >
+                  <i class="fas fa-envelope text-sm text-white"></i>
+                </div>
+                <span class="text-gray-300">info@snim.ps</span>
+              </div>
+              <div class="flex items-center space-x-3 space-x-reverse">
+                <div
+                  class="w-8 h-8 bg-gradient-to-br from-blue-400 to-cyan-600 rounded-full flex items-center justify-center"
+                >
+                  <i class="fas fa-phone text-sm text-white"></i>
+                </div>
+                <span class="text-gray-300">+970-123456789</span>
+              </div>
+            </div>
+
+            <div class="flex space-x-4 space-x-reverse">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gradient-to-br from-sky-400 to-blue-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gradient-to-br from-blue-400 to-cyan-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gradient-to-br from-cyan-400 to-sky-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Partners Section -->
+          <div>
+            <h3 class="text-xl font-bold mb-6">الشركاء</h3>
+            <div class="grid grid-cols-2 gap-4 mb-8">
+              <div
+                class="bg-white rounded-lg p-4 flex items-center justify-center card-hover"
+              >
+                <div class="text-center">
+                  <div
+                    class="w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg flex items-center justify-center mx-auto mb-2"
+                  >
+                    <i class="fas fa-building text-blue-600 text-2xl"></i>
+                  </div>
+                  <span class="text-gray-800 text-sm font-medium"
+                    >اتحاد الغرف التجارية</span
+                  >
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-lg p-4 flex items-center justify-center card-hover"
+              >
+                <div class="text-center">
+                  <div
+                    class="w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-lg flex items-center justify-center mx-auto mb-2"
+                  >
+                    <i class="fas fa-handshake text-green-600 text-2xl"></i>
+                  </div>
+                  <span class="text-gray-800 text-sm font-medium"
+                    >شركة الغدير</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <h3 class="text-xl font-bold mb-6">جهات التسجيل الرسمي</h3>
+            <div class="grid grid-cols-2 gap-4">
+              <div
+                class="bg-white rounded-lg p-4 flex items-center justify-center card-hover"
+              >
+                <div class="text-center">
+                  <div
+                    class="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-lg flex items-center justify-center mx-auto mb-2"
+                  >
+                    <i class="fas fa-university text-purple-600 text-2xl"></i>
+                  </div>
+                  <span class="text-gray-800 text-sm font-medium"
+                    >وزارة الاقتصاد</span
+                  >
+                </div>
+              </div>
+              <div
+                class="bg-white rounded-lg p-4 flex items-center justify-center card-hover"
+              >
+                <div class="text-center">
+                  <div
+                    class="w-16 h-16 bg-gradient-to-br from-orange-100 to-orange-200 rounded-lg flex items-center justify-center mx-auto mb-2"
+                  >
+                    <i
+                      class="fas fa-network-wired text-orange-600 text-2xl"
+                    ></i>
+                  </div>
+                  <span class="text-gray-800 text-sm font-medium"
+                    >اتحاد شركات أنظمة المعلومات</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2025 جميع الحقوق محفوظة - شركة سنيم</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Add scroll effect to navbar
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector("nav");
+        if (window.scrollY > 100) {
+          navbar.style.background =
+            "linear-gradient(135deg, rgba(88, 28, 135, 0.98) 0%, rgba(147, 51, 234, 0.98) 50%, rgba(168, 85, 247, 0.98) 100%)";
+          navbar.style.boxShadow = "0 8px 32px rgba(88, 28, 135, 0.3)";
+        } else {
+          navbar.style.background =
+            "linear-gradient(135deg, rgba(88, 28, 135, 0.95) 0%, rgba(147, 51, 234, 0.95) 50%, rgba(168, 85, 247, 0.95) 100%)";
+          navbar.style.boxShadow = "0 4px 20px rgba(88, 28, 135, 0.2)";
+        }
+      });
+
+      // Animate elements on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      // Observe all cards and sections
+      document.querySelectorAll(".card-hover, section").forEach((el) => {
+        el.style.opacity = "0";
+        el.style.transform = "translateY(30px)";
+        el.style.transition = "all 0.6s ease";
+        observer.observe(el);
+      });
+
+      // Auth Modal Functions
+      function openAuthModal() {
+        const modal = document.getElementById("authModal");
+        const modalContent = document.getElementById("modalContent");
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+        setTimeout(() => {
+          modalContent.style.transform = "scale(1)";
+        }, 10);
+      }
+
+      function closeAuthModal() {
+        const modal = document.getElementById("authModal");
+        const modalContent = document.getElementById("modalContent");
+        modalContent.style.transform = "scale(0.95)";
+        setTimeout(() => {
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+        }, 300);
+      }
+
+      function showLogin() {
+        document.getElementById("loginForm").classList.remove("hidden");
+        document.getElementById("registerForm").classList.add("hidden");
+        document
+          .getElementById("loginTab")
+          .classList.add("border-purple-500", "text-purple-600");
+        document
+          .getElementById("loginTab")
+          .classList.remove("border-gray-200", "text-gray-500");
+        document
+          .getElementById("registerTab")
+          .classList.add("border-gray-200", "text-gray-500");
+        document
+          .getElementById("registerTab")
+          .classList.remove("border-purple-500", "text-purple-600");
+      }
+
+      function showRegister() {
+        document.getElementById("registerForm").classList.remove("hidden");
+        document.getElementById("loginForm").classList.add("hidden");
+        document
+          .getElementById("registerTab")
+          .classList.add("border-purple-500", "text-purple-600");
+        document
+          .getElementById("registerTab")
+          .classList.remove("border-gray-200", "text-gray-500");
+        document
+          .getElementById("loginTab")
+          .classList.add("border-gray-200", "text-gray-500");
+        document
+          .getElementById("loginTab")
+          .classList.remove("border-purple-500", "text-purple-600");
+      }
+
+      // Close modal when clicking outside
+      document
+        .getElementById("authModal")
+        .addEventListener("click", function (e) {
+          if (e.target === this) {
+            closeAuthModal();
+          }
+        });
+    </script>
+    <script>
+      (function () {
+        function c() {
+          var b = a.contentDocument || a.contentWindow.document;
+          if (b) {
+            var d = b.createElement("script");
+            d.innerHTML =
+              "window.__CF$cv$params={r:'9743b40af23c997d',t:'MTc1NjA0NzQ1OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName("head")[0].appendChild(d);
+          }
+        }
+        if (document.body) {
+          var a = document.createElement("iframe");
+          a.height = 1;
+          a.width = 1;
+          a.style.position = "absolute";
+          a.style.top = 0;
+          a.style.left = 0;
+          a.style.border = "none";
+          a.style.visibility = "hidden";
+          document.body.appendChild(a);
+          if ("loading" !== document.readyState) c();
+          else if (window.addEventListener)
+            document.addEventListener("DOMContentLoaded", c);
+          else {
+            var e = document.onreadystatechange || function () {};
+            document.onreadystatechange = function (b) {
+              e(b);
+              "loading" !== document.readyState &&
+                ((document.onreadystatechange = e), c());
+            };
+          }
+        }
+      })();
+    </script>
   </body>
 </html>
